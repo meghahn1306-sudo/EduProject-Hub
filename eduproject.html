@@ -1,0 +1,315 @@
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduProject Hub</title>
+<link rel="shortcut icon" href="images/logo.jpg" type="logo.jpg">
+
+
+<style>
+html {
+  scroll-padding-top: 70px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #eef2f7;
+}
+
+header {
+  background: linear-gradient(45deg, #11998e, #38ef7d);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+nav {
+  background: #222;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.nav-links a:hover {
+  background: #11998e;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+.container {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+button {
+  background: #11998e;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  padding: 30px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  width: 220px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  border-bottom: 2px solid #11998e;
+  padding-bottom: 5px;
+}
+
+.footer-section p,
+.footer-section a {
+  font-size: 14px;
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #38ef7d;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #555;
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #222;
+    flex-direction: column;
+    display: none;
+  }
+
+  .nav-links a {
+    padding: 15px;
+    border-top: 1px solid #444;
+    text-align: center;
+  }
+
+  #menu-toggle:checked + .menu-icon + .nav-links {
+    display: flex;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1> EduProject Hub</h1>
+  <p>Create & Learn Educational Projects</p>
+</header>
+
+<nav>
+  <div class="nav-container">
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label>
+
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#create">Create</a>
+      <a href="#enroll">Enroll</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<section id="projects">
+  <h2>Available Projects</h2>
+
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1677442135136-760c813028c0">
+      <h3>AI Chatbot</h3>
+      <p>Based on Artificial Intelligence</p>
+      <button>Enroll</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794">
+      <h3>Library Management System</h3>
+      <p>Database based project</p>
+      <button>Enroll</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+      <h3>Portfolio Website</h3>
+      <p>Web development project</p>
+      <button>Enroll</button>
+    </div>
+  </div>
+</section>
+
+<section id="create">
+  <h2>Create Your Project</h2>
+  <form>
+    <input type="text" placeholder="Project Title" required>
+    <select required>
+      <option value="">Select Domain</option>
+      <option>AI</option>
+      <option>Web Development</option>
+      <option>Database</option>
+    </select>
+    <textarea placeholder="Project Description"></textarea>
+    <button type="submit">Create Project</button>
+  </form>
+</section>
+
+<section id="enroll">
+  <h2>Enroll Yourself</h2>
+  <form>
+    <input type="text" placeholder="Project Name" required>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Why do you want to learn this?"></textarea>
+    <button type="submit">Enroll Now</button>
+  </form>
+</section>
+
+</div>
+
+<footer>
+
+  <div class="footer-container">
+
+    <div class="footer-section">
+      <h3>About</h3>
+      <p>EduProject Hub helps students explore and create innovative academic projects in AI, Web Development, and Databases.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <p> Bengaluru, India</p>
+      <p> +91 98765 43210</p>
+      <p> eduproject@email.com</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <p><a href="#">Home</a></p>
+      <p><a href="#projects">Projects</a></p>
+      <p><a href="#create">Create</a></p>
+      <p><a href="#enroll">Enroll</a></p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <p> Facebook</p>
+      <p> Instagram</p>
+      <p> Twitter</p>
+      <p> YouTube</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 EduProject Hub | Designed for Students & Learners </p>
+  </div>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nike Style Page</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+
+        header {
+            background: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .section {
+            padding: 20px 40px;
+        }
+
+        .section h2 {
+            margin-bottom: 10px;
+        }
+
+        .grid-2, .grid-3 {
+            display: grid;
+            gap: 15px;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .products img {
+            height: 150px;
+            object-fit: contain;
+            background: white;
+            padding: 10px;
+        }
+
+        footer {
+            background: #eee;
+            padding: 30px;
+            text-align: center;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>NIKE</h2>
+    <nav>
+        <a href="#">Men</a>
+        <a href="#">Women</a>
+        <a href="#">Kids</a>
+        <a href="#">Sale</a>
+    </nav>
+</header>
+
+<!-- Banner -->
+<div class="banner">
+    <img src="banner.jpg">
+</div>
+
+<!-- Athletic Picks -->
+<div class="section">
+    <h2>Athletic Picks</h2>
+    <div class="grid-2">
+        <div class="card"><img src="img1.jpg"></div>
+        <div class="card"><img src="img2.jpg"></div>
+    </div>
+</div>
+
+<!-- Featured -->
+<div class="section">
+    <h2>Featured</h2>
+    <div class="grid-2">
+        <div class="card"><img src="img3.jpg"></div>
+        <div class="card"><img src="img4.jpg"></div>
+    </div>
+</div>
+
+<!-- Shoes -->
+<div class="section">
+    <h2>Shop Nike Shoes</h2>
+    <div class="grid-3">
+        <div class="card"><img src="shoe1.jpg"></div>
+        <div class="card"><img src="shoe2.jpg"></div>
+        <div class="card"><img src="shoe3.jpg"></div>
+    </div>
+</div>
+
+<!-- Jerseys -->
+<div class="section">
+    <h2>Shop Jerseys</h2>
+    <div class="grid-3 products">
+        <div class="card"><img src="jersey1.jpg"></div>
+        <div class="card"><img src="jersey2.jpg"></div>
+        <div class="card"><img src="jersey3.jpg"></div>
+    </div>
+</div>
+
+<!-- Sports -->
+<div class="section">
+    <h2>Shop by Sport</h2>
+    <div class="grid-3">
+        <div class="card"><img src="sport1.jpg"></div>
+        <div class="card"><img src="sport2.jpg"></div>
+        <div class="card"><img src="sport3.jpg"></div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Nike Clone. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
